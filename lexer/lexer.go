@@ -7,6 +7,10 @@ type Lexer struct {
 	position     int
 	readPosition int
 	ch           byte
+
+	// NOTE: This could be extended in the future to keep track of
+	// line/char position in the input to provide better error messaging
+	// during parsing.
 }
 
 func New(input string) *Lexer {
